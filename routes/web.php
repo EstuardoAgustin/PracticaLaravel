@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\TodosController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/saludos', function () {
+    return view('app');
+});
+
+Route::get('/todos', function () {
+    return view('todos.index');
+});
+
+Route::post('/todos', [TodosController::class, 'store'] )->name('todos');
