@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EstuardoController;
+use App\Http\Controllers\TablaController;
 use App\Http\Controllers\TodosController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -23,8 +25,17 @@ Route::get('/saludos', function () {
     return view('app');
 });
 
-Route::get('/todos', function () {
+Route::get('/tareas', function () {
     return view('todos.index');
 });
 
-Route::post('/todos', [TodosController::class, 'store'] )->name('todos');
+
+//Route::post('/tareas', [EstuardoController::class, 'store'] )->name('todos');
+//Route::post('/tareas', [TablaController::class, 'store'])->name('todos');
+
+
+Route::post('/tareas', [TodosController::class, 'store'] )->name('todos');
+Route::get('/tareas', [TodosController::class, 'index'] )->name('todos');
+Route::patch('/tareas', [TodosController::class, 'store'] )->name('todos-edit');
+Route::delete('/tareas', [TodosController::class, 'store'] )->name('todos-destroy');
+Route::delete('/tareas', [TodosController::class, 'store'] )->name('todos-destroy');
