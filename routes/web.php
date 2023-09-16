@@ -36,6 +36,6 @@ Route::get('/tareas', function () {
 
 Route::post('/tareas', [TodosController::class, 'store'] )->name('todos');
 Route::get('/tareas', [TodosController::class, 'index'] )->name('todos');
-Route::patch('/tareas', [TodosController::class, 'store'] )->name('todos-edit');
-Route::delete('/tareas', [TodosController::class, 'store'] )->name('todos-destroy');
-Route::delete('/tareas', [TodosController::class, 'store'] )->name('todos-destroy');
+Route::get('/tareas/{id}', [TodosController::class, 'show'] )->name('todos-show');
+Route::patch('/tareas/{id}', [TodosController::class, 'update'] )->name('todos-edit');
+Route::delete('/tareas/{id}', [TodosController::class, 'destroy'] )->name('todos-destroy');
