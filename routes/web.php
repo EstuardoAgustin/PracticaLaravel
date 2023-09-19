@@ -3,6 +3,7 @@
 use App\Http\Controllers\EstuardoController;
 use App\Http\Controllers\TablaController;
 use App\Http\Controllers\TodosController;
+use App\Http\Controllers\CategoriasController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
@@ -39,3 +40,6 @@ Route::get('/tareas', [TodosController::class, 'index'] )->name('todos');
 Route::get('/tareas/{id}', [TodosController::class, 'show'] )->name('todos-show');
 Route::patch('/tareas/{id}', [TodosController::class, 'update'] )->name('todos-edit');
 Route::delete('/tareas/{id}', [TodosController::class, 'destroy'] )->name('todos-destroy');
+
+// Categorias rutas
+Route::resource('categorias', CategoriasController::class);
