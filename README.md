@@ -20,6 +20,7 @@ En el Proceso se desarrollaron tecnicas y temas como:
 - Migraciones
 - conexion a bases de datos ya existente
 - entorno montado en DOCKER
+- Flujo de trabajo versionamiento Git Flow
 
 
 
