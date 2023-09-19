@@ -16,9 +16,10 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 En el Proceso se desarrollaron tecnicas y temas como:
 
 - Desarrollo MVC
+- uso y manipulacion de rutas, vistas , controlladores  y modelos
 - Migraciones
 - conexion a bases de datos ya existente
-- 
+- entorno montado en DOCKER
 
 
 
