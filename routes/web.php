@@ -4,6 +4,7 @@ use App\Http\Controllers\EstuardoController;
 use App\Http\Controllers\TablaController;
 use App\Http\Controllers\TodosController;
 use App\Http\Controllers\CategoriasController;
+use App\Livewire\Main;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 
@@ -43,3 +44,6 @@ Route::delete('/tareas/{id}', [TodosController::class, 'destroy'] )->name('todos
 
 // Categorias rutas
 Route::resource('categorias', CategoriasController::class);
+
+//rutas con livewire
+//Route::get('/tareas_Livewire', [Main::class] )->name('livewire');
