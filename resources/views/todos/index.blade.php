@@ -3,6 +3,9 @@
 @section('content')
 
 
+
+
+
   <livewire:main/>
-    
+
 @endsection
