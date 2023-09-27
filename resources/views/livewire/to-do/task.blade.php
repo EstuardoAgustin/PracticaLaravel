@@ -1,6 +1,7 @@
 <div>
     {{-- Stop trying to control. --}}
     {{-- <form action="{{ route('todos') }}" method="POST"> --}}
+        {{-- ANDRE ESTE PRUEBA --}}
     <form wire:submit.prevent="store">
         @csrf
 
